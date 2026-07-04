@@ -1,0 +1,113 @@
+body {
+    background: linear-gradient(
+        to right,
+        #050375 0%,
+        #003cff 50%,
+        #050375 100%
+    );
+    color: white;
+}
+
+#chh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mine {
+    background: linear-gradient(90deg, #ea5959, #754703, #ffff00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.cards {
+    position: relative;
+    width: min(90vw, 600px);
+    height: 320px;
+    margin: 60px auto;
+}
+
+.card,
+#cardone,
+#cardtow {
+    position: absolute;
+    width: clamp(130px, 25vw, 192px);
+    aspect-ratio: 12 / 13;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.25s ease;
+}
+
+.card {
+    background-image: url("https://i.pinimg.com/originals/1f/74/33/1f7433df87151d0bf2acd7fef2ed89e9.gif");
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.card:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+#cardone {
+    background-image: url("https://i.pinimg.com/736x/76/54/57/765457f350f8db88b84abdcbd194ee83.jpg");
+    left: 15%;
+    top: 20px;
+    transform: rotate(-13deg);
+    z-index: 2;
+}
+
+#cardone:hover {
+    transform: rotate(-13deg) scale(1.1);
+}
+
+#cardtow {
+    background-image: url("https://i.pinimg.com/originals/bb/ee/b2/bbeeb2ebbb138f8afa824e6e1c568973.gif");
+    left: 55%;
+    top: 20px;
+    transform: rotate(13deg);
+    z-index: 1;
+}
+
+#cardtow:hover {
+    transform: rotate(13deg) scale(1.1);
+}
+
+
+/* responsive media by ai*/
+@media (max-width: 768px) {
+
+    .cards {
+        width: 100%;
+        height: 240px;
+    }
+
+    .card,
+    #cardone,
+    #cardtow {
+        width: 120px;
+    }
+
+    #cardone {
+        left: 2%;
+        top: 20px;
+    }
+
+    .card {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    #cardtow {
+        left: calc(100% - 125px);
+        top: 20px;
+    }
+}
